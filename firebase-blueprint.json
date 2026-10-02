@@ -1,0 +1,311 @@
+{
+  "entities": {
+    "User": {
+      "title": "User",
+      "description": "User profile with authentication and contact information.",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Firebase Auth UID of the user.",
+          "maxLength": 128
+        },
+        "email": {
+          "type": "string",
+          "description": "Email address of the authenticated user.",
+          "maxLength": 128
+        },
+        "displayName": {
+          "type": "string",
+          "description": "Display name or full name of the user.",
+          "maxLength": 100
+        },
+        "photoURL": {
+          "type": "string",
+          "description": "Avatar URL or preset avatar URL.",
+          "maxLength": 500
+        },
+        "phoneNumber": {
+          "type": "string",
+          "description": "Contact phone number for booking reminders.",
+          "maxLength": 30
+        },
+        "formulaNotes": {
+          "type": "string",
+          "description": "Personal haircut and grooming formula notes.",
+          "maxLength": 1000
+        },
+        "role": {
+          "type": "string",
+          "description": "User access role (client or admin).",
+          "enum": ["client", "admin"]
+        },
+        "createdAt": {
+          "type": "string",
+          "description": "ISO timestamp or server timestamp of creation."
+        },
+        "updatedAt": {
+          "type": "string",
+          "description": "ISO timestamp or server timestamp of update."
+        }
+      },
+      "required": ["id", "role"]
+    },
+    "Appointment": {
+      "title": "Appointment",
+      "description": "Salon appointment reservation booked by or for a client.",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique appointment identifier.",
+          "maxLength": 128
+        },
+        "userId": {
+          "type": "string",
+          "description": "Auth UID of the customer who booked the appointment.",
+          "maxLength": 128
+        },
+        "customerName": {
+          "type": "string",
+          "description": "Client full name.",
+          "maxLength": 100
+        },
+        "customerPhone": {
+          "type": "string",
+          "description": "Client phone number.",
+          "maxLength": 30
+        },
+        "serviceId": {
+          "type": "string",
+          "description": "Selected service ID.",
+          "maxLength": 64
+        },
+        "serviceName": {
+          "type": "string",
+          "description": "Selected service title.",
+          "maxLength": 100
+        },
+        "servicePrice": {
+          "type": "number",
+          "description": "Service price in Toman."
+        },
+        "originalServicePrice": {
+          "type": "number",
+          "description": "Original regular service price before discount."
+        },
+        "discountAmount": {
+          "type": "number",
+          "description": "Discount savings amount in Toman."
+        },
+        "totalPrice": {
+          "type": "number",
+          "description": "Total price including addons."
+        },
+        "dayNumber": {
+          "type": "number",
+          "description": "Solar calendar day of the month."
+        },
+        "dateStr": {
+          "type": "string",
+          "description": "Formatted Persian date string.",
+          "maxLength": 64
+        },
+        "time": {
+          "type": "string",
+          "description": "Appointment start time string (HH:MM).",
+          "maxLength": 10
+        },
+        "duration": {
+          "type": "number",
+          "description": "Duration in minutes."
+        },
+        "status": {
+          "type": "string",
+          "description": "Status of the appointment.",
+          "enum": ["pending", "confirmed", "in_progress", "completed", "cancelled", "no_show"]
+        },
+        "notes": {
+          "type": "string",
+          "description": "Client preferences or special instructions.",
+          "maxLength": 500
+        },
+        "createdAt": {
+          "type": "string",
+          "description": "Timestamp when appointment was created."
+        }
+      },
+      "required": ["id", "customerName", "serviceName", "status"]
+    },
+    "Booking": {
+      "title": "Booking",
+      "description": "Active client reservation synchronized to Firestore as the source of truth.",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique booking identifier.",
+          "maxLength": 128
+        },
+        "reservationNumber": {
+          "type": "string",
+          "description": "Boarding pass or booking reference number.",
+          "maxLength": 64
+        },
+        "appointmentNumber": {
+          "type": "string",
+          "description": "Reference appointment serial number.",
+          "maxLength": 64
+        },
+        "customerId": {
+          "type": "string",
+          "description": "Customer client profile ID.",
+          "maxLength": 128
+        },
+        "customerName": {
+          "type": "string",
+          "description": "Client full name.",
+          "maxLength": 100
+        },
+        "customerPhone": {
+          "type": "string",
+          "description": "Client phone number.",
+          "maxLength": 30
+        },
+        "serviceId": {
+          "type": "string",
+          "description": "Selected service ID.",
+          "maxLength": 64
+        },
+        "serviceName": {
+          "type": "string",
+          "description": "Selected service title.",
+          "maxLength": 100
+        },
+        "servicePrice": {
+          "type": "number",
+          "description": "Service price in Toman."
+        },
+        "totalAmount": {
+          "type": "number",
+          "description": "Total reservation price."
+        },
+        "depositAmount": {
+          "type": "number",
+          "description": "Paid deposit amount."
+        },
+        "date": {
+          "type": "string",
+          "description": "Persian date string of the booking.",
+          "maxLength": 64
+        },
+        "selectedDate": {
+          "type": "string",
+          "description": "Formatted date string for the client display.",
+          "maxLength": 64
+        },
+        "startTime": {
+          "type": "string",
+          "description": "Appointment start time (HH:MM).",
+          "maxLength": 10
+        },
+        "selectedTime": {
+          "type": "string",
+          "description": "Formatted start time string for client display.",
+          "maxLength": 10
+        },
+        "endTime": {
+          "type": "string",
+          "description": "Appointment end time (HH:MM).",
+          "maxLength": 10
+        },
+        "durationMinutes": {
+          "type": "number",
+          "description": "Duration in minutes."
+        },
+        "barberId": {
+          "type": "string",
+          "description": "Selected barber ID.",
+          "maxLength": 64
+        },
+        "barberName": {
+          "type": "string",
+          "description": "Selected barber name.",
+          "maxLength": 100
+        },
+        "artisan": {
+          "type": "string",
+          "description": "Artisan barber title.",
+          "maxLength": 100
+        },
+        "chairId": {
+          "type": "string",
+          "description": "Selected chair or suite ID.",
+          "maxLength": 64
+        },
+        "chairName": {
+          "type": "string",
+          "description": "Selected chair suite name.",
+          "maxLength": 100
+        },
+        "suite": {
+          "type": "string",
+          "description": "Salon suite name.",
+          "maxLength": 100
+        },
+        "location": {
+          "type": "string",
+          "description": "Salon branch location name and address.",
+          "maxLength": 200
+        },
+        "status": {
+          "type": "string",
+          "description": "Status of the reservation.",
+          "enum": ["pending", "confirmed", "in_progress", "completed", "cancelled", "no_show"]
+        },
+        "customerNotes": {
+          "type": "string",
+          "description": "Client notes or requests.",
+          "maxLength": 500
+        },
+        "stylingNotes": {
+          "type": "string",
+          "description": "Styling instructions.",
+          "maxLength": 500
+        },
+        "userId": {
+          "type": "string",
+          "description": "Auth UID if authenticated.",
+          "maxLength": 128
+        },
+        "createdAt": {
+          "type": "string",
+          "description": "Timestamp when booking was created."
+        },
+        "updatedAt": {
+          "type": "string",
+          "description": "Timestamp when booking was last updated."
+        }
+      },
+      "required": ["id", "customerName", "serviceName", "status"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": "User",
+      "description": "User profiles partitioned by Auth UID."
+    },
+    "/appointments/{appointmentId}": {
+      "schema": "Appointment",
+      "description": "Reservations and salon appointments."
+    },
+    "/bookings/{bookingId}": {
+      "schema": "Booking",
+      "description": "Current reservations synced with Firestore as the source of truth."
+    },
+    "/atelier_store/{docId}": {
+      "schema": "Booking",
+      "description": "Authoritative persistent salon business state."
+    }
+  }
+}

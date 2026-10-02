@@ -1,0 +1,566 @@
+{
+  "studio": {
+    "address": "خیابان نامجو بین کوچه ۵ و ۷",
+    "privateCourtyardCode": "",
+    "conciergePhone": "۰۲۱-۲۲۳۳۴۴۵۵",
+    "valetInstructions": "",
+    "valetServiceAvailable": false,
+    "amenities": [
+      "رزرو آنلاین ۲۴ ساعته",
+      "یادآوری خودکار پیامکی",
+      "ثبت سوابق و سلیقه مشتری",
+      "نظافت و استریل کامل ابزارها",
+      "پذیرایی چای و قهوه"
+    ],
+    "tagline": "رزرو آنلاین نوبت آرایشگاه، بدون تماس تلفنی",
+    "neighborhood": "",
+    "email": "info@salon.ir",
+    "operationalStatus": "open",
+    "id": "royal-barber-tehran",
+    "city": "تهران",
+    "phone": "۰۲۱-۲۲۳۳۴۴۵۵",
+    "name": "سالن حامد افضلی",
+    "openingHours": [
+      {
+        "dayOfWeek": "شنبه تا چهارشنبه",
+        "closeTime": "۲۰:۰۰",
+        "openTime": "۱۰:۰۰"
+      },
+      {
+        "closeTime": "۲۲:۰۰",
+        "dayOfWeek": "پنجشنبه و جمعه",
+        "openTime": "۱۰:۰۰"
+      }
+    ]
+  },
+  "appointments": [
+    {
+      "id": "apt-local-test-1",
+      "appointmentNumber": "LOC-101",
+      "customerName": "رضا صادقی",
+      "customerPhone": "09121234567",
+      "customerId": "cust-local-1",
+      "serviceId": "service-haircut",
+      "service": {
+        "id": "service-haircut",
+        "name": "کوتاهی کلاسیک",
+        "price": 180000,
+        "durationMinutes": 45
+      },
+      "barberName": "علی رضایی",
+      "chairName": "صندلی شماره ۱",
+      "date": "شنبه، ۱۱ مهر ۱۴۰۵",
+      "dayNumber": 11,
+      "startTime": "15:00",
+      "endTime": "15:45",
+      "durationMinutes": 45,
+      "servicePrice": 180000,
+      "totalAmount": 180000,
+      "status": "confirmed",
+      "bookingSource": "online"
+    },
+    {
+      "id": "apt-test-customer-b",
+      "appointmentNumber": "AV-9002",
+      "customerName": "بهرام رادان",
+      "customerPhone": "09129998877",
+      "customerId": "client-bahram-2",
+      "serviceId": "service-haircut-beard",
+      "service": {
+        "id": "service-haircut-beard",
+        "name": "کوتاهی مو + اصلاح ریش",
+        "price": 220000,
+        "durationMinutes": 60
+      },
+      "barberName": "علی رضایی",
+      "chairName": "صندلی اصلی",
+      "date": "شنبه، ۱۱ مهر ۱۴۰۵",
+      "dayNumber": 11,
+      "startTime": "16:00",
+      "endTime": "17:00",
+      "durationMinutes": 60,
+      "servicePrice": 220000,
+      "totalAmount": 220000,
+      "status": "confirmed",
+      "bookingSource": "online"
+    },
+    {
+      "status": "confirmed",
+      "servicePrice": 150000,
+      "chairName": "صندلی اصلی",
+      "customerPhone": "09121112233",
+      "customerName": "سهراب سپهری",
+      "date": "جمعه، ۱۰ مهر ۱۴۰۵",
+      "customerId": "client-sohrab-1",
+      "serviceId": "service-haircut",
+      "startTime": "18:30",
+      "barberName": "علی رضایی",
+      "dayNumber": 10,
+      "bookingSource": "online",
+      "appointmentNumber": "AV-9001",
+      "service": {
+        "id": "service-haircut",
+        "price": 150000,
+        "name": "کوتاهی مو",
+        "durationMinutes": 40
+      },
+      "totalAmount": 150000,
+      "durationMinutes": 40,
+      "endTime": "19:10",
+      "id": "apt-test-customer-a"
+    },
+    {
+      "startTime": "16:00",
+      "status": "confirmed",
+      "customerName": "تست مستقیم",
+      "id": "test-direct-write-1",
+      "dayNumber": 15
+    },
+    {
+      "customerName": "تست مشتری",
+      "startTime": "14:00",
+      "status": "confirmed",
+      "dayNumber": 12,
+      "serviceId": "srv-1",
+      "id": "test-apt-1"
+    }
+  ],
+  "pastAppointments": [
+    {
+      "endTime": "17:00",
+      "customerName": "رضا کریمی",
+      "serviceName": "کوتاهی کلاسیک رویال",
+      "price": 350000,
+      "updatedAt": "2026-10-02T18:43:45.196Z",
+      "customerPhone": "09129876543",
+      "date": "1405/07/15",
+      "id": "apt-test-1790966623581",
+      "startTime": "16:00",
+      "servicePrice": 350000,
+      "status": "completed"
+    }
+  ],
+  "customers": [
+    {
+      "phone": "09129876543",
+      "avatarUrl": "",
+      "lastVisitDate": "1405/07/15",
+      "visitCount": 1,
+      "memberTier": "مهمان رویال",
+      "updatedAt": "2026-10-02T18:43:43.598Z",
+      "createdAt": "2026-10-02T18:43:43.598Z",
+      "totalSpend": 350000,
+      "id": "client-1790966623598",
+      "roleOrTitle": "مشتری جدید",
+      "name": "رضا کریمی"
+    },
+    {
+      "id": "cust-test-1790966623982",
+      "visitCount": 1,
+      "memberTier": "عضو ویژه VIP",
+      "updatedAt": "2026-10-02T19:24:35.397Z",
+      "createdAt": "2026-10-02T18:43:43.987Z",
+      "name": "امیرحسین رضایی",
+      "lastVisitDate": "جمعه، ۱۰ مهر ۱۴۰۵",
+      "phone": "09121112233",
+      "totalSpend": 150000
+    },
+    {
+      "phone": "09120000001",
+      "updatedAt": "2026-10-02T18:44:10.954Z",
+      "createdAt": "2026-10-02T18:44:09.660Z",
+      "memberTier": "عضو طلایی",
+      "visitCount": 5,
+      "avatarUrl": "",
+      "totalSpend": 1500000,
+      "id": "cust-1790966650084",
+      "lastVisitDate": "1405/07/20",
+      "roleOrTitle": "مشتری جدید",
+      "name": "سهراب سپهری"
+    },
+    {
+      "id": "client-bahram-2",
+      "name": "بهرام رادان",
+      "phone": "09129998877",
+      "avatarUrl": "",
+      "memberTier": "مهمان رویال",
+      "roleOrTitle": "مشتری جدید",
+      "visitCount": 1,
+      "totalSpend": 220000,
+      "lastVisitDate": "شنبه، ۱۱ مهر ۱۴۰۵",
+      "createdAt": "2026-10-02T19:24:58.258Z",
+      "updatedAt": "2026-10-02T19:24:58.258Z"
+    },
+    {
+      "id": "cust-local-1",
+      "name": "رضا صادقی",
+      "phone": "09121234567",
+      "avatarUrl": "",
+      "memberTier": "مهمان رویال",
+      "roleOrTitle": "مشتری جدید",
+      "visitCount": 1,
+      "totalSpend": 180000,
+      "lastVisitDate": "شنبه، ۱۱ مهر ۱۴۰۵",
+      "createdAt": "2026-10-02T19:58:48.971Z",
+      "updatedAt": "2026-10-02T19:58:48.971Z"
+    }
+  ],
+  "services": [
+    {
+      "price": 250000,
+      "sortOrder": 0,
+      "durationMinutes": 45,
+      "id": "svc-1",
+      "categoryId": "cat-hair",
+      "isActive": true,
+      "name": "اصلاح موی کلاسیک"
+    },
+    {
+      "categoryId": "cat-hair",
+      "isActive": true,
+      "name": "کوتاهی فید / اسکین‌فید",
+      "sortOrder": 1,
+      "id": "svc-2",
+      "price": 300000,
+      "durationMinutes": 45
+    },
+    {
+      "isActive": true,
+      "id": "svc-3",
+      "durationMinutes": 30,
+      "sortOrder": 0,
+      "name": "اصلاح ریش و خط ریش",
+      "categoryId": "cat-beard",
+      "price": 150000
+    },
+    {
+      "price": 200000,
+      "durationMinutes": 30,
+      "categoryId": "cat-beard",
+      "isActive": true,
+      "id": "svc-4",
+      "sortOrder": 1,
+      "name": "اصلاح صورت با تیغ داغ"
+    },
+    {
+      "durationMinutes": 120,
+      "categoryId": "cat-color",
+      "isActive": true,
+      "sortOrder": 0,
+      "name": "رنگ موی کامل",
+      "id": "svc-5",
+      "price": 1200000
+    },
+    {
+      "id": "svc-6",
+      "isActive": true,
+      "categoryId": "cat-color",
+      "name": "لایت و دکلره",
+      "durationMinutes": 180,
+      "sortOrder": 1,
+      "price": 1800000
+    },
+    {
+      "name": "پاکسازی پوست صورت",
+      "durationMinutes": 60,
+      "isActive": true,
+      "id": "svc-7",
+      "price": 800000,
+      "sortOrder": 0,
+      "categoryId": "cat-skin"
+    },
+    {
+      "id": "svc-8",
+      "price": 4500000,
+      "categoryId": "cat-combo",
+      "isActive": true,
+      "durationMinutes": 240,
+      "sortOrder": 0,
+      "name": "پکیج عروس داماد"
+    }
+  ],
+  "categories": [
+    {
+      "id": "cat-hair",
+      "name": "اصلاح مو",
+      "isActive": true,
+      "sortOrder": 0
+    },
+    {
+      "isActive": true,
+      "name": "اصلاح صورت",
+      "id": "cat-beard",
+      "sortOrder": 1
+    },
+    {
+      "name": "رنگ و لایت",
+      "sortOrder": 2,
+      "isActive": true,
+      "id": "cat-color"
+    },
+    {
+      "name": "پوست و درمان",
+      "sortOrder": 3,
+      "id": "cat-skin",
+      "isActive": true
+    },
+    {
+      "isActive": true,
+      "name": "پکیج‌های ترکیبی",
+      "id": "cat-combo",
+      "sortOrder": 4
+    }
+  ],
+  "chairs": [
+    {
+      "amenities": [
+        "صندلی برقی هیدرولیک",
+        "حوضچه شستشو"
+      ],
+      "name": "صندلی اصلی",
+      "isVip": false,
+      "assignedBarberId": "barber-ali-rezaei",
+      "floor": "سالن اصلی",
+      "chairNumber": "۰۱",
+      "id": "chair-01",
+      "status": "normal",
+      "mirrorType": "آینه کلاسیک با نورپردازی استاندارد",
+      "notes": "سرآرایشگر",
+      "assignedBarberName": "علی رضایی"
+    }
+  ],
+  "barbers": [
+    {
+      "certifications": [
+        "مدرک بین‌المللی پیرایش مردانه",
+        "متخصص فید و استایلینگ"
+      ],
+      "rating": 5,
+      "assignedChairId": "chair-01",
+      "totalClientsServed": 1850,
+      "isAvailableToday": true,
+      "specialties": [
+        "کوتاهی کلاسیک و مدرن",
+        "اصلاح با تیغ سنتی",
+        "فرم‌دهی تخصصی ریش"
+      ],
+      "name": "حامد افضلی",
+      "workingHours": [
+        {
+          "dayOfWeek": "شنبه",
+          "openTime": "10:00",
+          "isClosed": false,
+          "closeTime": "20:30"
+        },
+        {
+          "isClosed": false,
+          "dayOfWeek": "یکشنبه",
+          "openTime": "10:00",
+          "closeTime": "20:30"
+        },
+        {
+          "closeTime": "20:30",
+          "openTime": "10:00",
+          "isClosed": false,
+          "dayOfWeek": "دوشنبه"
+        },
+        {
+          "closeTime": "20:30",
+          "isClosed": false,
+          "openTime": "10:00",
+          "dayOfWeek": "سه‌شنبه"
+        },
+        {
+          "closeTime": "20:30",
+          "isClosed": false,
+          "openTime": "10:00",
+          "dayOfWeek": "چهارشنبه"
+        },
+        {
+          "dayOfWeek": "پنج‌شنبه",
+          "openTime": "10:00",
+          "isClosed": false,
+          "closeTime": "22:00"
+        },
+        {
+          "closeTime": "18:00",
+          "isClosed": false,
+          "openTime": "12:00",
+          "dayOfWeek": "جمعه"
+        }
+      ],
+      "bio": "سرآرایشگر و متخصص فرم‌دهی مو و اصلاح کلاسیک و مدرن با بیش از ۸ سال سابقه حرفه‌ای.",
+      "experienceYears": 8,
+      "email": "ali@royalbarber.ir",
+      "title": "آرایشگر",
+      "avatarUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20160%20160%22%20width%3D%22160%22%20height%3D%22160%22%3E%0A%20%20%20%20%3Crect%20width%3D%22160%22%20height%3D%22160%22%20rx%3D%2240%22%20fill%3D%22%23FF7043%22%2F%3E%0A%20%20%20%20%3Cg%20transform%3D%22translate(20%2C%2020)%22%3E%0A%20%20%20%20%20%20%3Cpath%20d%3D%22M60%2010%20L85%2055%20L75%2080%20L60%2090%20L45%2080%20L35%2055%20Z%22%20fill%3D%22%23FFFFFF%22%2F%3E%0A%20%20%20%3Cpath%20d%3D%22M20%2030%20L45%2055%20L35%2085%20L15%2065%20Z%22%20fill%3D%22%23FFCCBC%22%2F%3E%0A%20%20%20%3Cpath%20d%3D%22M100%2030%20L75%2055%20L85%2085%20L105%2065%20Z%22%20fill%3D%22%23FFCCBC%22%2F%3E%0A%20%20%20%3Cpath%20d%3D%22M35%2055%20L60%2090%20L85%2055%20Z%22%20fill%3D%22%23FFFFFF%22%2F%3E%0A%20%20%20%3Cpolygon%20points%3D%2260%2C90%2052%2C78%2068%2C78%22%20fill%3D%22%23263238%22%2F%3E%0A%20%20%20%3Ccircle%20cx%3D%2246%22%20cy%3D%2262%22%20r%3D%224%22%20fill%3D%22%23263238%22%2F%3E%0A%20%20%20%3Ccircle%20cx%3D%2274%22%20cy%3D%2262%22%20r%3D%224%22%20fill%3D%22%23263238%22%2F%3E%0A%20%20%20%3Cpath%20d%3D%22M60%2090%20L48%20108%20L72%20108%20Z%22%20fill%3D%22%23FFFFFF%22%2F%3E%0A%20%20%20%20%3C%2Fg%3E%0A%20%20%3C%2Fsvg%3E",
+      "workingDays": [
+        "شنبه",
+        "یکشنبه",
+        "دوشنبه",
+        "سه‌شنبه",
+        "چهارشنبه",
+        "پنج‌شنبه",
+        "جمعه"
+      ],
+      "phone": "۰۹۱۲۱۱۱۱۱۱۱",
+      "id": "barber-ali-rezaei"
+    }
+  ],
+  "products": [],
+  "carts": {
+    "cust-1790966650084": {
+      "items": [
+        {
+          "productId": "prod-1790966650310",
+          "quantity": 1
+        }
+      ]
+    },
+    "cust-123": {
+      "items": [
+        {
+          "quantity": 2,
+          "productId": "prod-test-1790966624476"
+        }
+      ]
+    }
+  },
+  "orders": [],
+  "notifications": [
+    {
+      "id": "notif-1790971128971",
+      "type": "appointment_new",
+      "title": "رزرو آنلاین جدید: رضا صادقی",
+      "message": "نوبت برای تاریخ شنبه، ۱۱ مهر ۱۴۰۵ ساعت 15:00 ثبت گردید.",
+      "timestamp": "هم‌اکنون",
+      "isRead": false,
+      "priority": "high",
+      "entityType": "appointment",
+      "entityId": "apt-local-test-1",
+      "createdAt": "2026-10-02T19:58:48.971Z"
+    },
+    {
+      "id": "notif-1790969098258",
+      "type": "appointment_new",
+      "title": "رزرو آنلاین جدید: بهرام رادان",
+      "message": "نوبت برای تاریخ شنبه، ۱۱ مهر ۱۴۰۵ ساعت 16:00 ثبت گردید.",
+      "timestamp": "هم‌اکنون",
+      "isRead": false,
+      "priority": "high",
+      "entityType": "appointment",
+      "entityId": "apt-test-customer-b",
+      "createdAt": "2026-10-02T19:24:58.258Z"
+    },
+    {
+      "message": "نوبت برای تاریخ جمعه، ۱۰ مهر ۱۴۰۵ ساعت 18:30 ثبت گردید.",
+      "title": "رزرو آنلاین جدید: سهراب سپهری",
+      "entityId": "apt-test-customer-a",
+      "createdAt": "2026-10-02T19:24:35.397Z",
+      "priority": "high",
+      "timestamp": "هم‌اکنون",
+      "entityType": "appointment",
+      "id": "notif-1790969075397",
+      "type": "appointment_new",
+      "isRead": false
+    }
+  ],
+  "accoutrements": [
+    {
+      "description": "شستشوی حرفه‌ای با شامپوی تقویتی",
+      "durationMinutes": 15,
+      "price": 80000,
+      "name": "شستشو و ویتامینه",
+      "id": "acc-wash",
+      "selected": false
+    },
+    {
+      "description": "مرتب‌سازی و تغذیه ریش",
+      "selected": false,
+      "price": 100000,
+      "name": "فرم‌دهی و روغن ریش",
+      "id": "acc-beard",
+      "durationMinutes": 15
+    },
+    {
+      "name": "ماسک لایه‌بردار",
+      "selected": false,
+      "description": "پاکسازی عمیق پوست صورت",
+      "durationMinutes": 20,
+      "price": 120000,
+      "id": "acc-peel"
+    },
+    {
+      "selected": false,
+      "durationMinutes": 15,
+      "name": "ماساژ سر با اسطوخودوس",
+      "id": "acc-scalp",
+      "description": "کاهش استرس و تقویت ریشه مو",
+      "price": 90000
+    }
+  ],
+  "beverageOptions": [
+    {
+      "price": 35000,
+      "isAvailable": true,
+      "description": "چای دمی درجه یک همراه با نبات زعفرانی و هل تازه",
+      "category": "hot",
+      "icon": "coffee",
+      "id": "tea",
+      "name": "چای اعلا لاهیجان و هل"
+    },
+    {
+      "description": "اسپرسوی تازه رست با دانه ۱۰۰٪ عربیکا تک‌خاستگاه",
+      "isAvailable": true,
+      "price": 55000,
+      "icon": "coffee",
+      "name": "قهوه اسپرسو دوبل",
+      "category": "hot",
+      "id": "espresso"
+    },
+    {
+      "description": "شیر بخارداده‌شده با اسپرسو تازه و سیروپ کارامل",
+      "id": "latte",
+      "isAvailable": true,
+      "name": "کافه لاته و کارامل",
+      "icon": "coffee",
+      "category": "hot",
+      "price": 65000
+    },
+    {
+      "description": "آب پرتقال یا انار طبیعی تازه فشرده‌شده",
+      "id": "fresh-juice",
+      "name": "آبمیوه طبیعی فصل",
+      "icon": "glass-water",
+      "isAvailable": true,
+      "price": 60000,
+      "category": "cold"
+    },
+    {
+      "description": "کروسان تازه پخت کره‌ای با شکلات یا کوکی بادام",
+      "category": "snack",
+      "isAvailable": true,
+      "price": 45000,
+      "icon": "utensils",
+      "name": "کروسان فرانسوی و کوکی گرم",
+      "id": "croissant"
+    },
+    {
+      "price": 15000,
+      "category": "cold",
+      "id": "water",
+      "name": "آب معدنی خنک",
+      "isAvailable": true,
+      "icon": "glass-water",
+      "description": "آب معدنی کوهستان به همراه برش لیموی تازه"
+    }
+  ],
+  "settings": {
+    "lastAuditCheck": "2026-10-02T18:43:44.964Z",
+    "autoConfirmOnlineBookings": true
+  },
+  "users": [],
+  "lastUpdated": "2026-10-02T19:58:48.971Z",
+  "testKey": "verification_passed",
+  "updatedAt": "2026-10-02T18:41:56.146Z"
+}

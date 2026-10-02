@@ -1,0 +1,80 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Helper functions
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    function isOwner(userId) {
+      return isSignedIn() && request.auth.uid == userId;
+    }
+
+    function isAdmin() {
+      return isSignedIn() && (
+        (request.auth.token.email in ['heiskottensbro@gmail.com', 'astrologistkotten@gmail.com', 'speakerkot10@gmail.com']) ||
+        exists(/databases/$(database)/documents/admins/$(request.auth.uid))
+      );
+    }
+
+    // Connection test document
+    match /test/{docId} {
+      allow read, write: if true;
+    }
+
+    // Atelier Central Store (Authoritative source of truth for salon business state)
+    match /atelier_store/{docId} {
+      allow read, write: if true;
+    }
+
+    // Appointments collection
+    match /appointments/{appointmentId} {
+      allow read, write: if true;
+    }
+
+    // Bookings collection (Synchronizing client reservations)
+    match /bookings/{bookingId} {
+      allow read, write: if true;
+    }
+
+    // Customers collection
+    match /customers/{customerId} {
+      allow read, write: if true;
+    }
+
+    // Services collection
+    match /services/{serviceId} {
+      allow read, write: if true;
+    }
+
+    // Categories collection
+    match /categories/{categoryId} {
+      allow read, write: if true;
+    }
+
+    // Products / Boutique collection
+    match /products/{productId} {
+      allow read, write: if true;
+    }
+
+    // Orders collection
+    match /orders/{orderId} {
+      allow read, write: if true;
+    }
+
+    // Users profile collection
+    match /users/{userId} {
+      allow get: if true;
+      allow list: if isAdmin();
+      allow create, update: if isSignedIn() || isOwner(userId) || isAdmin();
+      allow delete: if isAdmin();
+    }
+
+    // Admins collection
+    match /admins/{adminId} {
+      allow read: if isSignedIn();
+      allow write: if isAdmin();
+    }
+  }
+}
